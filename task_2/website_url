@@ -1,1 +1,10 @@
 https://storage.googleapis.com/dare-it-new-bucket-task-2/index.html
+
+gcloud storage buckets create gs://<BUCKET_NAME> 
+gcloud storage buckets add-iam-policy-binding  gs://<BUCKET_NAME> --member=allUsers --role=roles/storage.objectViewer 
+gcloud storage cp <FILE_PATH> gs://<BUCKET_NAME>
+
+example usage
+gcloud storage buckets create gs://dare-it-new-bucket-command 
+gcloud storage buckets add-iam-policy-binding  gs://dare-it-new-bucket-command --member=allUsers --role=roles/storage.objectViewer 
+gcloud storage cp ./task_2/index.html gs://dare-it-new-bucket-command
